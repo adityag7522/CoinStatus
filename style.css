@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    background-color: rgb(17, 17, 17);
+    color: white;
+}
+
+
+/* Navbar start */
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    padding: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap:1rem;
+    align-items: center;
+    >button {
+        background-color: rgb(74, 128, 226);
+        border-radius: 20px;
+        border: 0px;
+        height: 100%;
+        width: 120px;
+        color: white;
+        font-size: 0.9rem;
+        padding: 0.9rem;
+    }
+}
+
+.nav-link {
+    color: rgb(100,100,100);
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+
+/* NavBar End */
+
+
+.container {
+    justify-content: center;
+}
+
+
+
+/* Grid list selector */
+
+.view{
+    margin: 40px 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.grid {
+    padding-bottom: 10px;
+    text-align: center;
+    width: 50%;
+}
+
+.grid:hover {
+    cursor: pointer;
+    color: rgb(100,100,100);
+}
+
+.list {
+    padding-bottom: 10px;
+    text-align: center;
+    width: 50%;
+}
+
+.list:hover {
+    cursor: pointer;
+    color: rgb(100, 100, 100);
+}
+
+.active {
+    cursor: pointer;
+    color: rgb(74, 128, 226);
+    border-bottom: 1px solid rgb(74, 128, 226);
+    transition: all 1s;
+}
+
+/* Grid List Selector end */
+
+
+/* coins start */
+
+/* for grid */
+
+.coins {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 10%;
+}
+
+.coin {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 200px;
+    gap: 1rem;
+    margin: auto;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.coin-head {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+
+}
+
+.coin-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.coin-symbol {
+    text-transform: uppercase;
+}
+
+.price-change {
+    color: rgb(115, 183, 112);
+    border: 1px solid rgb(115, 183, 112);
+    border-radius: 2rem;
+    width: max-content;
+    padding: 10px;
+    height: fit-content;
+}
+
+.current-price {
+    color: rgb(115, 183, 112);
+    font-size: 1.4rem;
+}
+
+.other {
+    >p{
+        line-height: 30px;
+        color: rgb(100, 100, 100);
+    }
+    >.total::before {
+        content: 'Total Volume: ';
+    }
+    
+    >.market::before {
+        content:'Market Cap: ';
+    }
+}
+
+
+/* for grid end */
+
+
+/* for list */
+
+.coins-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 10%;
+
+    >.coin {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        height: 200px;
+        border: 0;
+        height: auto;
+        justify-content: left;
+        margin: auto;
+        border-radius: 1rem;
+        padding: 2rem;
+
+        >.other {
+            display: flex;
+            gap: 3rem;
+            width: 300px;
+            >p {
+                text-align: left;
+                width: 200px;
+            }
+            >.total::before {
+                content: '';
+            }
+            
+            >.market::before {
+                content:'';
+            }
+        }
+
+        >.current-price {
+            width: 200px;
+            margin-left: 100px;
+        }
+
+        >.coin-head {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+            width: 300px;
+        }
+    }
+    
+    
+}
+
+
+/* for list end */
+
+
+/* coins end */
