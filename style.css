@@ -221,3 +221,30 @@
 
 
 /* coins end */
+
+
+
+/* mobile device */
+@media screen and (max-width: 1410px) {
+    .view {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .view {
+        display: none;
+    }
+
+    .navbar {
+        >ul {
+            display: none;
+        }
+    }
+
+    .listOfCoins {
+        display: flex;
+        flex-direction: column;
+    }
+}
